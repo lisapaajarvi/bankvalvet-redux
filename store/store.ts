@@ -5,7 +5,7 @@ import bankReducer from "./bankReducer";
 const store = createStore(bankReducer);
 
 /* Define our own custom hooks so we get strong typings */
-type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof store.getState>;
 type AppDispatch = typeof store.dispatch;
 
 export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector;

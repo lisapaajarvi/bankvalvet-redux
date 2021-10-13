@@ -1,10 +1,11 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import { selectBalance, selectTransactions } from "../store/bankSelectors";
 import { useAppSelector } from "../store/store";
 
 function BalanceScreen() {
-    const balance = useAppSelector(state => state.balance);
-    const transactions = useAppSelector(state => [...state.transactions].reverse());
+    const balance = useAppSelector(selectBalance);
+    const transactions = useAppSelector(selectTransactions);
 
     return (
         <View style={styles.root}>
