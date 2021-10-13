@@ -1,8 +1,14 @@
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { createStore } from "redux";
+import { combineReducers, createStore } from "redux";
 import bankReducer from "./bankReducer";
 
-const store = createStore(bankReducer);
+const rootReducer = combineReducers({
+    bank: bankReducer,
+    // profile: profileReducer,
+    // etc..
+});
+
+const store = createStore(rootReducer);
 
 /* Define our own custom hooks so we get strong typings */
 export type RootState = ReturnType<typeof store.getState>;
