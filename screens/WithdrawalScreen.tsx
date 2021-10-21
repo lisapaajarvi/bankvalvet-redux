@@ -9,7 +9,6 @@ function WithdrawalScreen() {
 
     const onSave = () => {
         if (!value) return;
-        // dispatch({ type: "WITHDRAWAL", payload: value });
         dispatch(withdraw(value));
     }
 
