@@ -1,17 +1,4 @@
-
-interface WithdrawalAction {
-    type: "WITHDRAWAL";
-    payload: number;
-}
-
-interface DepositAction {
-    type: "DEPOSIT";
-    payload: number;
-}
-
-type KnownAction = WithdrawalAction | DepositAction;
-
-/* ------------------------------ */
+import type { BankAction } from "./bankActions";
 
 interface BankState {
     balance: number;
@@ -22,6 +9,8 @@ const initialState: BankState = {
     balance: 0,
     transactions: []
 }
+
+type KnownAction = BankAction;
 
 function bankReducer(state: BankState = initialState, action: KnownAction): BankState {
     switch (action.type) {
