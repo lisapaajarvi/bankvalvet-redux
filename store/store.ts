@@ -1,8 +1,8 @@
-import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
-import { applyMiddleware, combineReducers, createStore } from "redux";
-import thunk, { ThunkAction, ThunkDispatch } from "redux-thunk";
-import { BankAction } from "./bankActions";
-import bankReducer from "./bankReducer";
+import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
+import { applyMiddleware, combineReducers, createStore } from 'redux';
+import thunk, { ThunkAction, ThunkDispatch } from 'redux-thunk';
+import { BankAction } from './bankActions';
+import bankReducer from './bankReducer';
 
 /* Combine reducer and create store with thunk */
 const rootReducer = combineReducers({

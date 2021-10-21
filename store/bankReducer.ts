@@ -1,4 +1,4 @@
-import type { BankAction } from "./bankActions";
+import type { BankAction } from './bankActions';
 
 interface BankState {
     balance: number;
@@ -14,14 +14,14 @@ type KnownAction = BankAction;
 
 function bankReducer(state: BankState = initialState, action: KnownAction): BankState {
     switch (action.type) {
-        case "WITHDRAWAL": {
+        case 'WITHDRAWAL': {
             return {
                 ...state,
                 balance: state.balance - action.payload,
                 transactions: [...state.transactions, -action.payload]
             }
         }
-        case "DEPOSIT": {
+        case 'DEPOSIT': {
             return {
                 ...state,
                 balance: state.balance + action.payload,

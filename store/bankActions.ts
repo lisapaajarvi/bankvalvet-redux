@@ -1,12 +1,12 @@
-import { AppThunkAction } from "./store";
+import { AppThunkAction } from './store';
 
 export interface WithdrawalAction {
-    type: "WITHDRAWAL";
+    type: 'WITHDRAWAL';
     payload: number;
 }
 
 export interface DepositAction {
-    type: "DEPOSIT";
+    type: 'DEPOSIT';
     payload: number;
 }
 
@@ -16,5 +16,5 @@ export const withdraw = (value: number): AppThunkAction =>
     (dispatch, getState) => {
         const state = getState();
         console.log(state.bank.balance);
-        dispatch({ type: "WITHDRAWAL", payload: value });
+        dispatch({ type: 'WITHDRAWAL', payload: value });
     }
