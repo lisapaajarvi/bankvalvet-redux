@@ -1,7 +1,7 @@
-import React from "react";
-import { View, Text, StyleSheet } from "react-native";
-import { selectBalance, selectTransactions } from "../store/bankSelectors";
-import { useAppSelector } from "../store/store";
+import React from 'react';
+import { View, Text, StyleSheet } from 'react-native';
+import { selectBalance, selectTransactions } from '../store/bankSelectors';
+import { useAppSelector } from '../store/store';
 
 function BalanceScreen() {
     const balance = useAppSelector(selectBalance);
@@ -21,8 +21,8 @@ function BalanceScreen() {
 const styles = StyleSheet.create({
     root: {
         flex: 1,
-        alignItems: "center",
-        justifyContent: "center"
+        alignItems: 'center',
+        justifyContent: 'center'
     }
 })
 

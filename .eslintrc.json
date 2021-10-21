@@ -18,6 +18,6 @@
         "@typescript-eslint"
     ],
     "rules": {
-        "quotes":"error"
+        "quotes":["error", "single"]
     }
 }

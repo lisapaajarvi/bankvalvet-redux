@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { View, Text, StyleSheet, TextInput, Button } from "react-native";
-import { useAppDispatch } from "../store/store";
+import React, { useState } from 'react';
+import { View, Text, StyleSheet, TextInput, Button } from 'react-native';
+import { useAppDispatch } from '../store/store';
 
 function DepositScreen() {
     const dispatch = useAppDispatch();
@@ -8,7 +8,7 @@ function DepositScreen() {
 
     const onSave = () => {
         if (!value) return;
-        dispatch({ type: "DEPOSIT", payload: value });
+        dispatch({ type: 'DEPOSIT', payload: value });
     }
 
     return (

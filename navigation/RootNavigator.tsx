@@ -1,10 +1,10 @@
 import React from 'react';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { NavigationContainer } from "@react-navigation/native";
-import BalanceScreen from "../screens/BalanceScreen";
-import DepositScreen from "../screens/DepositScreen";
-import WithdrawalScreen from "../screens/WithdrawalScreen";
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { NavigationContainer } from '@react-navigation/native';
+import BalanceScreen from '../screens/BalanceScreen';
+import DepositScreen from '../screens/DepositScreen';
+import WithdrawalScreen from '../screens/WithdrawalScreen';
 
 type RootTabParams = {
     Balance: undefined;
